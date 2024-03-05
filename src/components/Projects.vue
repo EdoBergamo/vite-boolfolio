@@ -26,7 +26,9 @@ export default {
     <div v-if="projects.length > 0">
       <ul>
         <li v-for="project in projects" :key="project?.id">
-          <h1>{{ project?.name }}</h1>
+          <a :href="'/projects/' + project.id">
+            <h1>{{ project?.name }}</h1>
+          </a>
         </li>
       </ul>
     </div>
